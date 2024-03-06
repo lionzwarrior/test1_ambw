@@ -11,25 +11,6 @@
   display: none;
 }
 
-.main-image {
-  max-width: 100%;
-  margin: auto;
-  display: block;
-}
-
-.floating-button {
-  z-index: 1000;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 30px;
-}
-
-.input-section {
-  display: block;
-  margin: 10px auto;
-}
-
 .shared-moment-card.mdl-card {
-  margin: 10px auto;
+  margin: 20px 20px;
 }

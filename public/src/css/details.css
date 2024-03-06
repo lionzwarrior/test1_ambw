@@ -1,0 +1,10 @@
+.details-description {
+    margin: 20px 20%;
+}
+
+.details-image {
+    max-width: 50%;
+    max-height: 35%;
+    margin: auto;
+    display: block;
+}
