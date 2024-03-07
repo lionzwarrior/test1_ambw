@@ -14,3 +14,10 @@
 .shared-moment-card.mdl-card {
   margin: 20px 20px;
 }
+
+#shared-moments {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
