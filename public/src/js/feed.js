@@ -2,6 +2,7 @@ var shareImageButton = document.querySelector('#share-image-button');
 var createPostArea = document.querySelector('#create-post');
 var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
 var sharedMomentsArea = document.querySelector('#shared-moments');
+localStorage.setItem("id", null);
 
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
@@ -63,8 +64,10 @@ function createCard(data) {
   cardWrapper.style.width = '250px';
   cardWrapper.style.cursor = 'pointer';
   cardWrapper.addEventListener('click', function(){
-    location.href = '/details?id=' + data.id;
-    localStorage.setItem("idToSend", data.id);
+    var params = new URLSearchParams();
+    params.append("id", data.id);
+    location.href = '/details?' + params.toString();
+    // localStorage.setItem("id", data.id);
   });
   var cardTitleImage = document.createElement('img');
   cardTitleImage.src = data.image;

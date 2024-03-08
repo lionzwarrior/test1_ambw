@@ -1,4 +1,4 @@
-var id = localStorage.getItem("idToSend");
+var params = new URLSearchParams(window.location.search), id = params.get("id");
 
 var url = 'https://tes1-c14210041-default-rtdb.firebaseio.com/posts.json';
 var networkDataReceived = false;
@@ -7,6 +7,8 @@ function updateUI(data) {
     document.getElementById('detailsTitle').innerText = data.title;
     document.getElementById('detailsImg').src = data.image;
     document.getElementById('detailsDescription').innerText = data.description;
+    document.title = data.title;
+    console.log("the title is " + data.title);
 }
 
 fetch(url)
